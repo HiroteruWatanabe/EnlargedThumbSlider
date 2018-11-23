@@ -68,12 +68,6 @@ open class EnlargedThumbSlider: UISlider {
         }
     }
     
-    open override var backgroundColor: UIColor? {
-        didSet {
-            highlightedThumbImage = circleThumb(color: highlightedThumbColor, for: .highlighted)
-        }
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()

@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         slider.setMinimumTrackTintColor(.darkGray, for: .normal)
         slider.setMinimumTrackTintColor(primaryColor, for: .highlighted)
-        slider.maximumTrackTintColor = UIColor(red:212 / 255.0, green: 212 / 255.0, blue: 212 / 255.0, alpha: 1.0)
+        slider.maximumTrackTintColor = .lightGray
         slider.setCircleThumb(color: .darkGray, for: .normal)
         slider.setCircleThumb(color: primaryColor, for: .highlighted)
         

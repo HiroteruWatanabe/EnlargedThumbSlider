@@ -9,7 +9,35 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Features
+
+EnlargedThumbSlider imitates Apple's Music app Slider behavior.
+When slider is highlighted, the slider's thumb is enlarged and changes color with animation.
+
+### Normal state
+<img src="https://user-images.githubusercontent.com/32364302/48955864-46b07300-ef93-11e8-8646-d4a8a9396ed6.PNG" width="300">
+
+### Highlighted
+<img src="https://user-images.githubusercontent.com/32364302/48955878-529c3500-ef93-11e8-964c-6404d4f30d36.PNG" width="300">
+
+## Usage
+
+```Swift
+func setupSlider() {
+// The color is supposed to be the same color as slider's backgroundColor or superview color.
+slider.thumbOuterColor = .white // Set the color of the thumb outer side. 
+
+slider.setMinimumTrackTintColor(.darkGray, for: .normal) 
+slider.setMinimumTrackTintColor(primaryColor, for: .highlighted)
+slider.maximumTrackTintColor = .lightGray 
+slider.setCircleThumb(color: .darkGray, for: .normal) 
+slider.setCircleThumb(color: primaryColor, for: .highlighted)
+}
+```
+
 ## Requirements
+
+iOS 10.0 or later
 
 ## Installation
 
