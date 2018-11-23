@@ -1,0 +1,27 @@
+PODS:
+  - EnlargedThumbSlider (0.1.0)
+  - Nimble (7.0.3)
+  - Quick (1.2.0)
+
+DEPENDENCIES:
+  - EnlargedThumbSlider (from `../`)
+  - Nimble (~> 7.0.2)
+  - Quick (~> 1.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  EnlargedThumbSlider:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EnlargedThumbSlider: e786afd39b5c6b5820608edf57e6086c2fc965b8
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+
+PODFILE CHECKSUM: 44b154277f71132dcac6d18622266bb2dbbc87eb
+
+COCOAPODS: 1.5.3
