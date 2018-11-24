@@ -11,7 +11,7 @@ import UIKit
 
 @IBDesignable
 open class EnlargedThumbSlider: UISlider {
-
+    
     private var thumbView: UIImageView = UIImageView()
     private var thumbImageView: UIImageView = UIImageView()
     private var thumbOuterView: UIImageView = UIImageView()
@@ -46,7 +46,7 @@ open class EnlargedThumbSlider: UISlider {
             }
         }
     }
-
+    
     
     /// The color of the thumb's circle image for highlighted state.
     @IBInspectable
@@ -63,8 +63,7 @@ open class EnlargedThumbSlider: UISlider {
     @IBInspectable
     open var thumbOuterColor: UIColor = .white {
         didSet {
-            guard let outerLayer = thumbOuterView.layer.sublayers?.first as? CAShapeLayer else { return }
-            outerLayer.fillColor = thumbOuterColor.cgColor
+            thumbOuterView.tintColor = thumbOuterColor
         }
     }
     
@@ -211,11 +210,12 @@ open class EnlargedThumbSlider: UISlider {
             self.minimumTrackTintColor = minimumTrackTintColorForNormal
         }
     }
-
+    
     private func enlargeThumb() {
         let thumbCenter = thumbView.center
         thumbView.frame.size = thumbOuterSize
         thumbView.center = thumbCenter
+        
         thumbOuterView.transform = CGAffineTransform.identity
         thumbView.insertSubview(thumbOuterView, belowSubview: thumbImageView)
         thumbOuterView.frame.size = normalThumbSize
@@ -228,6 +228,9 @@ open class EnlargedThumbSlider: UISlider {
             self.thumbImageView.frame.origin = .zero
             self.thumbImageView.image = self.highlightedThumbImage
             self.thumbOuterView.transform = CGAffineTransform(scaleX: self.thumbOuterSize.width / self.normalThumbSize.width, y: self.thumbOuterSize.height / self.normalThumbSize.height)
+            
+        }, completion: {(_) in
+            self.thumbView.center = thumbCenter
         })
     }
     
@@ -244,5 +247,3 @@ open class EnlargedThumbSlider: UISlider {
         })
     }
 }
-
-
