@@ -27,7 +27,10 @@ class ViewController: UIViewController {
         slider.maximumTrackTintColor = .lightGray
         slider.setCircleThumb(color: .darkGray, for: .normal)
         slider.setCircleThumb(color: primaryColor, for: .highlighted)
-        
+        let playingTime = Int(slider.value)
+        let remainingTime = Int(slider.maximumValue - slider.value)
+        playingTimeLabel.text = String(format: "%d:%02d", playingTime / 60, playingTime % 60)
+        remainingTimeLabel.text = String(format: "%d:%02d", remainingTime / 60, remainingTime % 60)
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,6 +73,10 @@ class ViewController: UIViewController {
     
     @IBAction func valueChangedSlider(_ sender: UISlider) {
         updateLabelLayout(sender: sender)
+        let playingTime = Int(sender.value)
+        let remainingTime = Int(sender.maximumValue - sender.value)
+        playingTimeLabel.text = String(format: "%d:%02d", playingTime / 60, playingTime % 60)
+        remainingTimeLabel.text = String(format: "%d:%02d", remainingTime / 60, remainingTime % 60)
     }
 
     @IBAction func touchedUpSlider(_ sender: UISlider) {
@@ -83,6 +90,6 @@ class ViewController: UIViewController {
         updateLabelLayout(sender: sender)
         playingTimeLabel.textColor = primaryColor
     }
-    
+   
 }
 

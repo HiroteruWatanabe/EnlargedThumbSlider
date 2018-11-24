@@ -216,6 +216,7 @@ open class EnlargedThumbSlider: UISlider {
         let thumbCenter = thumbView.center
         thumbView.frame.size = thumbOuterSize
         thumbView.center = thumbCenter
+        
         thumbOuterView.transform = CGAffineTransform.identity
         thumbView.insertSubview(thumbOuterView, belowSubview: thumbImageView)
         thumbOuterView.frame.size = normalThumbSize
@@ -228,6 +229,9 @@ open class EnlargedThumbSlider: UISlider {
             self.thumbImageView.frame.origin = .zero
             self.thumbImageView.image = self.highlightedThumbImage
             self.thumbOuterView.transform = CGAffineTransform(scaleX: self.thumbOuterSize.width / self.normalThumbSize.width, y: self.thumbOuterSize.height / self.normalThumbSize.height)
+            
+        }, completion: {(_) in
+            self.thumbView.center = thumbCenter
         })
     }
     
