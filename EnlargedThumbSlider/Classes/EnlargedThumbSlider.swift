@@ -3,7 +3,7 @@
 //  poly_player
 //
 //  Created by Hiroteru Watanabe on 2018/11/04.
-//  Copyright © 2018 Hiroteru Watanabw. All rights reserved.
+//  Copyright © 2018 Hiroteru Watanabe. All rights reserved.
 //
 
 import Foundation
@@ -92,19 +92,18 @@ open class EnlargedThumbSlider: UISlider {
         if self.state == state {
             thumbImageView.image = image
         }
-        super.setThumbImage(UIImage(), for: state)
+        if state == .normal {
+            super.setThumbImage(image, for: state)
+        }
     }
     
     override open func thumbRect(forBounds bounds: CGRect, trackRect rect: CGRect, value: Float) -> CGRect {
-        var frame = super.thumbRect(forBounds: bounds, trackRect: rect, value: value)
-        frame.origin.x -= thumbView.frame.width / 2
-        frame.origin.y -= thumbView.frame.height / 2
-        frame.size = thumbView.frame.size
+        let frame = super.thumbRect(forBounds: bounds, trackRect: rect, value: value)
+
         guard bounds.contains(rect) else {
             return frame
         }
-        
-        thumbView.frame.origin = frame.origin
+        thumbView.center = CGPoint(x: frame.midX, y: frame.midY)
         bringSubview(toFront: thumbView)
         return frame
     }
@@ -229,9 +228,8 @@ open class EnlargedThumbSlider: UISlider {
             self.thumbImageView.image = self.highlightedThumbImage
             self.thumbOuterView.transform = CGAffineTransform(scaleX: self.thumbOuterSize.width / self.normalThumbSize.width, y: self.thumbOuterSize.height / self.normalThumbSize.height)
             
-        }, completion: {(_) in
-            self.thumbView.center = thumbCenter
         })
+
     }
     
     private func shrinkThumb() {
@@ -246,4 +244,5 @@ open class EnlargedThumbSlider: UISlider {
             self.thumbOuterView.removeFromSuperview()
         })
     }
+   
 }

@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     
     func updateLabelLayout(sender: UISlider) {
         
-        /*var needsLayout = false
+        var needsLayout = false
         let trackFrame = sender.convert(sender.trackRect(forBounds: sender.bounds), to: view)
         let thumbFrame = sender.thumbRect(forBounds: sender.bounds, trackRect: trackFrame, value: sender.value)
         if playingTimeLabel.frame.maxX > thumbFrame.minX {
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         guard needsLayout else { return }
         UIView.animate(withDuration: 0.2) {
             self.view.layoutIfNeeded()
-        }*/
+        }
     }
     
     @IBAction func valueChangedSlider(_ sender: UISlider) {
