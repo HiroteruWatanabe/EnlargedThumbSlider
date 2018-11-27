@@ -88,7 +88,7 @@ open class EnlargedThumbSlider: UISlider {
         thumbOuterView.tintColor = thumbOuterColor
     }
     
-    override open func setThumbImage(_ image: UIImage?, for state: UIControlState) {
+    override open func setThumbImage(_ image: UIImage?, for state: UIControl.State) {
         if self.state == state {
             thumbImageView.image = image
         }
@@ -104,7 +104,7 @@ open class EnlargedThumbSlider: UISlider {
             return frame
         }
         thumbView.center = CGPoint(x: frame.midX, y: frame.midY)
-        bringSubview(toFront: thumbView)
+        bringSubviewToFront(thumbView)
         return frame
     }
     
