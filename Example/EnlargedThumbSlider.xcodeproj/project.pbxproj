@@ -216,11 +216,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = K4432XB73R;
+						DevelopmentTeam = YFQA8GKY2Y;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = YFQA8GKY2Y;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -495,7 +496,7 @@
 			baseConfigurationReference = 2FB4DF74D6A54C86497FA5DF /* Pods-EnlargedThumbSlider_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K4432XB73R;
+				DEVELOPMENT_TEAM = YFQA8GKY2Y;
 				INFOPLIST_FILE = EnlargedThumbSlider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -512,7 +513,7 @@
 			baseConfigurationReference = 305029A1DCC7E72DB01B5537 /* Pods-EnlargedThumbSlider_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K4432XB73R;
+				DEVELOPMENT_TEAM = YFQA8GKY2Y;
 				INFOPLIST_FILE = EnlargedThumbSlider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -528,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9AC47E8465B89EE7EFB8D981 /* Pods-EnlargedThumbSlider_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = YFQA8GKY2Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -550,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 45223623030C46F95006749E /* Pods-EnlargedThumbSlider_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = YFQA8GKY2Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
