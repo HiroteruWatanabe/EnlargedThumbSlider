@@ -120,7 +120,7 @@ open class EnlargedThumbSlider: UISlider {
                 super.isHighlighted = false
             }
             
-            if isHighlighted {
+            if newValue {
                 if !oldValue {
                     enlargeThumb()
                     minimumTrackTintColor = minimumTrackTintColorForHighlighted
