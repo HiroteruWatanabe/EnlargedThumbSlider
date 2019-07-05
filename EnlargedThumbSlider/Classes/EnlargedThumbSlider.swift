@@ -108,32 +108,6 @@ open class EnlargedThumbSlider: UISlider {
         return frame
     }
     
-    override open var isHighlighted: Bool {
-        get {
-            return super.isHighlighted
-        }
-        set {
-            let oldValue = super.isHighlighted
-            if isTracking {
-                super.isHighlighted = true
-            } else {
-                super.isHighlighted = false
-            }
-            
-            if newValue {
-                if !oldValue {
-                    enlargeThumb()
-                    minimumTrackTintColor = minimumTrackTintColorForHighlighted
-                }
-            } else {
-                if oldValue {
-                    shrinkThumb()
-                    minimumTrackTintColor = minimumTrackTintColorForNormal
-                }
-            }
-        }
-    }
-    
     private func circleImage(color: UIColor, circleSize: CGSize, imageSize: CGSize? = nil) -> UIImage {
         let imageSize = imageSize ?? circleSize
         let thumbLayer = CAShapeLayer()
@@ -244,5 +218,17 @@ open class EnlargedThumbSlider: UISlider {
             self.thumbOuterView.removeFromSuperview()
         })
     }
+    
+    override open func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        guard super.beginTracking(touch, with: event) else { return false }
+        enlargeThumb()
+        minimumTrackTintColor = minimumTrackTintColorForHighlighted
+        return true
+    }
    
+    override open func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        super.endTracking(touch, with: event)
+        shrinkThumb()
+        minimumTrackTintColor = minimumTrackTintColorForNormal
+    }
 }

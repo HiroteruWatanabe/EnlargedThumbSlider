@@ -232,6 +232,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -274,7 +275,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EnlargedThumbSlider_Tests/Pods-EnlargedThumbSlider_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EnlargedThumbSlider_Tests/Pods-EnlargedThumbSlider_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -285,7 +286,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EnlargedThumbSlider_Tests/Pods-EnlargedThumbSlider_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnlargedThumbSlider_Tests/Pods-EnlargedThumbSlider_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9EE739FE438B811EDFC9B2C4 /* [CP] Check Pods Manifest.lock */ = {
@@ -312,7 +313,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EnlargedThumbSlider_Example/Pods-EnlargedThumbSlider_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EnlargedThumbSlider_Example/Pods-EnlargedThumbSlider_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/EnlargedThumbSlider/EnlargedThumbSlider.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -321,7 +322,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EnlargedThumbSlider_Example/Pods-EnlargedThumbSlider_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnlargedThumbSlider_Example/Pods-EnlargedThumbSlider_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D698C52E6C0B516099D00C23 /* [CP] Check Pods Manifest.lock */ = {
@@ -543,7 +544,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EnlargedThumbSlider_Example.app/EnlargedThumbSlider_Example";
 			};
 			name = Debug;
@@ -562,7 +563,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EnlargedThumbSlider_Example.app/EnlargedThumbSlider_Example";
 			};
 			name = Release;

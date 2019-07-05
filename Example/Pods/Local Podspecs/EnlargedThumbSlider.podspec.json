@@ -1,7 +1,7 @@
 {
   "name": "EnlargedThumbSlider",
-  "version": "0.1.0",
-  "summary": "A short description of EnlargedThumbSlider.",
+  "version": "0.2.2",
+  "summary": "EnlargedThumbSlider is a custom slider. Its thumb is enlarged or shrinked with animation.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/HiroteruWatanabe/EnlargedThumbSlider",
   "license": {
@@ -13,10 +13,10 @@
   },
   "source": {
     "git": "https://github.com/HiroteruWatanabe/EnlargedThumbSlider.git",
-    "tag": "0.1.0"
+    "tag": "0.2.2"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
   "source_files": "EnlargedThumbSlider/Classes/**/*"
 }
