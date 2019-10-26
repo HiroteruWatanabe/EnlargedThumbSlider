@@ -92,5 +92,11 @@ class ViewController: UIViewController {
         playingTimeLabel.textColor = primaryColor
     }
    
+    @IBAction func touchCancelledSlider(_ sender: UISlider) {
+        playingTimeLabelTopConstraint.constant = -12
+        remainingTimeLabelTopConstraint.constant = -12
+        playingTimeLabel.textColor = .black
+        view.layoutIfNeeded()
+    }
 }
 

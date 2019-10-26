@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,6 +25,7 @@
                                     <constraint firstAttribute="height" constant="30" id="l9I-t2-BWN"/>
                                 </constraints>
                                 <connections>
+                                    <action selector="touchCancelledSlider:" destination="vXZ-lx-hvc" eventType="touchCancel" id="ceS-lH-6p4"/>
                                     <action selector="touchedDownSlider:" destination="vXZ-lx-hvc" eventType="touchDown" id="8Fd-yI-3Zq"/>
                                     <action selector="touchedUpSlider:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="i7N-O5-VUJ"/>
                                     <action selector="touchedUpSlider:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ycV-r7-8vF"/>
