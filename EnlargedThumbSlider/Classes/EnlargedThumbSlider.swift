@@ -91,6 +91,10 @@ open class EnlargedThumbSlider: UISlider {
     thumbView.addSubview(thumbImageView)
     thumbOuterView.image = thumbOuter(color: thumbOuterColor)
     thumbOuterView.tintColor = thumbOuterColor
+    super.setThumbImage(circleThumb(color: .clear, for: state), for: state)
+    setCircleThumb(color: normalThumbColor, for: .normal)
+    setCircleThumb(color: highlightedThumbColor, for: .highlighted)
+    setMinimumTrackTintColor(highlightedThumbColor, for: .highlighted)
   }
   
   private var percent: CGFloat {
@@ -219,7 +223,9 @@ open class EnlargedThumbSlider: UISlider {
       self.thumbOuterView.frame.origin = .zero
       self.thumbOuterView.frame.size = self.thumbOuterSize
       }, completion: { [weak self] _ in
-        self?.isThumbEnlarged = true
+        guard let self = self else { return }
+        guard self.thumbOuterView.superview != nil else { return }
+        self.isThumbEnlarged = true
     })
   }
   
@@ -234,6 +240,8 @@ open class EnlargedThumbSlider: UISlider {
       self.thumbImageView.frame.origin = .zero
       self.thumbImageView.image = self.normalThumbImage
       self.thumbOuterView.removeFromSuperview()
+    }, completion: { [weak self] _ in
+      self?.isThumbEnlarged = false
     })
   }
   
