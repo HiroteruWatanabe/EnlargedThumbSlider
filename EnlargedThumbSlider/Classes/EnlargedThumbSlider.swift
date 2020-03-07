@@ -106,9 +106,7 @@ open class EnlargedThumbSlider: UISlider {
     if self.state == state {
       thumbImageView.image = image
     }
-    if state == .normal {
-      super.setThumbImage(image, for: state)
-    }
+    super.setThumbImage(UIImage(), for: state)
   }
   
   override open func thumbRect(forBounds bounds: CGRect, trackRect rect: CGRect, value: Float) -> CGRect {
