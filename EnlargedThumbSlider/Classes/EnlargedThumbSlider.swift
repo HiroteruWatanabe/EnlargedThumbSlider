@@ -98,6 +98,7 @@ open class EnlargedThumbSlider: UISlider {
   }
   
   private var percent: CGFloat {
+    guard abs(minimumValue) + abs(maximumValue) > 0 else { return 0 }
     return CGFloat(value + abs(minimumValue)) / CGFloat(abs(minimumValue) + abs(maximumValue))
   }
   
