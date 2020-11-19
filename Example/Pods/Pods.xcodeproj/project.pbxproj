@@ -1066,7 +1066,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 0.2.6;
+				MARKETING_VERSION = 0.2.7;
 				MODULEMAP_FILE = "Target Support Files/EnlargedThumbSlider/EnlargedThumbSlider.modulemap";
 				PRODUCT_MODULE_NAME = EnlargedThumbSlider;
 				PRODUCT_NAME = EnlargedThumbSlider;
@@ -1359,7 +1359,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 0.2.6;
+				MARKETING_VERSION = 0.2.7;
 				MODULEMAP_FILE = "Target Support Files/EnlargedThumbSlider/EnlargedThumbSlider.modulemap";
 				PRODUCT_MODULE_NAME = EnlargedThumbSlider;
 				PRODUCT_NAME = EnlargedThumbSlider;
